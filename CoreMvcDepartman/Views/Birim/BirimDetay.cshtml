@@ -1,0 +1,25 @@
+﻿@using CoreMvcDepartman.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>@ViewBag.brmad Departmanı</div>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.perid</td>
+            <td>@x.ad</td>
+            <td>@x.soyad</td>
+            <td>@x.sehir</td>
+        </tr>
+    }
+</table>
